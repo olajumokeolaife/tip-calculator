@@ -1,0 +1,233 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background: hsl(185, 41%, 84%);
+  font-size: 24px;
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  margin: 5rem 0 3.5rem 0;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  padding: 3.4rem;
+  border-radius: 2.5rem;
+
+  .input {
+    /* border: 1px solid magenta; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    .label-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+
+      label {
+        color: hsl(186, 14%, 43%);
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+
+      .error-msg {
+        color: indianred;
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+    }
+
+    .inp-text {
+      background-color: hsl(189, 41%, 97%);
+      border: none;
+      width: 100%;
+      border-radius: 0.5rem;
+      color: hsl(183, 100%, 15%);
+      font-family: "Space Mono", monospace;
+      font-size: 2.4rem;
+      font-weight: 700;
+      text-align: right;
+      padding: 0.5rem 2.4rem;
+
+      &:focus {
+        outline: none;
+        border: 2px solid hsl(172, 67%, 45%);
+      }
+    }
+
+    .inp-wrapper {
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 2.4rem;
+        top: 1.5rem;
+      }
+    }
+
+    .btn-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      /* border: 1px solid black; */
+      padding: 1.2rem;
+
+      .btn {
+        width: 46%;
+        text-align: center;
+        background-color: hsl(183, 100%, 15%);
+        color: hsl(0, 0%, 100%);
+        font-size: 2.4rem;
+        font-weight: 700;
+        border-radius: 0.5rem;
+        padding: 0.6rem 0;
+        transition: all 0.5s ease;       
+
+        &:hover {
+          background-color: rgb(159, 232, 223);
+        }
+      }
+
+      .btn-active {
+        background-color: hsl(172, 67%, 45%);
+        color: hsl(183, 100%, 15%);
+      }
+
+      .inp-text {
+        width: 46%;
+      }
+    }
+  }
+
+  .output {
+    background-color: hsl(183, 100%, 15%);
+    width: 100%;
+    border-radius: 1.5rem;
+    padding: 2.2rem;
+
+    .line-wrapper {
+      .line-output {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1.4rem 0 2.4rem 0;
+
+        .title {
+          color: hsl(0, 0%, 100%);
+          font-weight: 700;
+          font-size: 1.6rem;
+        }
+
+        .desc {
+          color: hsl(186, 14%, 43%);
+          font-weight: 700;
+          font-size: 1.3rem;
+        }
+
+        .value {
+          color: hsl(172, 67%, 45%);
+          font-weight: 700;
+          font-size: 3rem;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      background-color: hsl(172, 67%, 45%);
+      text-transform: uppercase;
+      text-align: center;
+      color: hsl(183, 100%, 15%);
+      font-size: 2rem;
+      font-weight: 700;
+      border-radius: 0.5rem;
+      padding: 1rem 0;
+      margin-top: 3.4rem;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: rgb(159, 232, 223);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1350px) {
+  .card {
+    width: 64%;
+    flex-direction: row;
+    border-radius: 2.5rem;
+    align-items: stretch;
+    padding: 3.4rem;
+    gap: 1.5rem;
+    box-shadow:0px 10px 20px rgba(0, 0, 0, 0.05), 0px 20px 30px rgba(0,0,0,0.05);
+
+    .input {
+      width: 105%;
+      padding: 0 2.5rem 0.2rem 0.3rem;
+
+      .label-wrapper {
+        padding: 1rem 0;
+      }
+
+      .btn-wrapper {
+        .btn {
+          width: 30.5%;
+        }
+
+        .inp-text {
+          width: 30.5%;
+        }
+      }
+    }
+
+    .output {
+      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 4rem;
+
+      .line-wrapper {
+        .line-output {
+          margin: 0.5rem 0 2.4rem 0;
+
+          .value {
+            font-size: 4.6rem;
+          }
+        }
+      }
+    }
+  }
+}
